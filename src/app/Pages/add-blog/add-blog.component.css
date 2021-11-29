@@ -1,0 +1,24 @@
+.form{
+    padding: 50px;
+}
+.form-group{
+    margin-top: 20px;
+}
+
+td{
+    width: 300px;
+  
+}
+input{
+    width: 100px;
+    height: 40px;
+}
+.form-control{
+    height: 50px;
+    width: 600px;
+    overflow: scroll;
+    
+}
+button{
+    padding: 15px;
+}

@@ -1,0 +1,29 @@
+<div class="articles">
+    <div class="cards">
+        <div>
+            <img src="{{info.urlToImage}}" onerror="this.src='assets/Images/telsa.png'" width="300" height="250"
+                class="img_align">
+        </div>
+        <div class="content">
+            <h2 (click)="specificdata(info.url)" class="title" title="click for more details">{{info.title }}</h2>
+            <span *ngIf="info.description.length < textlength">
+                <h3>{{info.description}}</h3>
+            </span>
+            <span *ngIf="info.description.length > textlength && ! showMore">
+                <h3> {{info.description.substring(0,textlength)}}...</h3> <span (click)="showMore = true"><a>Read
+                        More</a></span>
+            </span>
+            <span *ngIf="info.description.length > textlength &&  showMore">
+                <h3> {{info.description}}</h3> <span (click)="showMore = false"><a>Read less</a></span>
+            </span>
+            <h5>Author Name: <span class="author">{{info.author}}</span> &nbsp; &nbsp;PublishedAt:<span
+                    class="author">{{info.publishedAt | date:"dd:MM:yyyy
+                    HH:mm"}}</span></h5>
+
+
+
+
+        </div>
+
+    </div>
+</div>

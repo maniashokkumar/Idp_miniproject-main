@@ -1,0 +1,76 @@
+<!-- <div class="articles">
+    <div>
+
+        <div class="cards" *ngFor="let info of all_Data; let i = index">
+            <ng-container *ngIf="i<=con">
+                <div>
+                    <img [routerLink]="['blog',i]" src="{{info.urlToImage}}"
+                        onerror="this.src='assets/Images/telsa.png'" width="300" height="250" class="img_align">
+                </div>
+                <div class="content">
+                    <h2 [routerLink]="['blog',i]" class="title" title="click for more details">{{info.title }}</h2>
+                    <span *ngIf="info.description.length <= textlength">
+                        <h3>{{info.description}}</h3>
+                    </span>
+                    <span *ngIf="info.description.length > textlength && ! showMore">
+                        <h3> {{info.description.substring(0,textlength)}}...</h3> <span
+                            (click)="showMore = true"><a>Read
+                                More</a></span>
+                    </span>
+                    <span *ngIf="info.description.length > textlength &&  showMore">
+                        <h3> {{info.description}}</h3> <span (click)="showMore = false"><a>Read less</a></span>
+                    </span>
+                    <h5>Author Name: <span class="author">{{info.author}}</span> &nbsp; &nbsp;PublishedAt:<span
+                            class="author">{{info.publishedAt | date:"dd:MM:yyyy
+                            HH:mm"}}</span></h5>
+
+                    <i (click)="Edit(i)" title="Click to edit" class="fa fa-edit" style="font-size:24px"></i>
+
+                </div>
+                <i class="fa fa-close" title="click to delete" (click)="delete(i)" style="font-size:30px;color:red"></i>
+            </ng-container>
+
+
+
+
+
+        </div>
+        <span class=showmore *ngIf="con ==4 ">
+            <span (click)="showmore() "><a>Show
+                    More <i class="fa fa-angle-double-down"></i></a></span>
+        </span>
+        <span class=showmore *ngIf="con >4 ">
+            <span (click)="showless() "><a>Show
+                    less <i class="fa fa-angle-double-up"></i></a></span>
+        </span>
+    </div>
+
+
+
+    <div class="clear">
+
+    </div>  
+</div> -->
+<div class="cards" *ngFor="let info of all_Data; let i = index">
+    <ng-container *ngIf="i<=con">
+
+        <app-cardtemplate [info]="info"></app-cardtemplate>
+        <div class="edit">
+            <i (click)="Edit(i)" title="Click to edit" class="fa fa-edit" style="font-size:20px; color:red">Edit</i>
+
+            <i (click)="delete(i)" class="fa fa-trash-o" style="font-size:20px;color:red">Delete</i>
+        </div>
+        <hr>
+    </ng-container>
+
+</div>
+<div class="edit">
+    <span class=showmore *ngIf="con ==4 ">
+        <span (click)="showmore() "><a>Show
+                More <i class="fa fa-angle-double-down"></i></a></span>
+    </span>
+    <span class=showmore *ngIf="con >4 ">
+        <span (click)="showless() "><a>Show
+                less <i class="fa fa-angle-double-up"></i></a></span>
+    </span>
+</div>

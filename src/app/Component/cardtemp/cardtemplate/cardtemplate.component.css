@@ -1,0 +1,65 @@
+.articles{
+    padding: 50px;
+    padding-bottom: 0px;
+   text-align: center;
+  
+}
+
+.cards{
+  border-radius: 20px;
+margin: auto;
+   display: flex;
+   gap: 10px;
+   background-color: rgb(233, 231, 231);
+   width: 90%;
+   text-align: justify;
+   margin-bottom: 40px;
+  
+  
+
+   
+}
+.title{
+    color: blue;
+    cursor: pointer;
+}
+.cards img{
+    border-radius: 20px 0px 0px 20px;
+    
+}
+.readmore{
+    float: right;
+    margin-right: 50px;
+   
+}
+.clear{
+    clear: both;
+}
+.redmobtn{
+    background-color: yellowgreen;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 0px 20px 0px;
+}
+.content{
+    margin-top: 20px;
+  
+    margin-right: 20px;
+    line-height: 25px;
+}
+a{
+    color: blue;
+    text-decoration: blue;
+}
+.author{
+ color: green;
+}
+.showmore{
+  float: right;
+ 
+}
+.cards:hover{
+   transform:scale(1.1);
+   transition-duration: 0.4s;
+}

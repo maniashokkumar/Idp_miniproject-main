@@ -1,0 +1,115 @@
+<div class="form">
+    <form [formGroup]="blogForm">
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>Title:</label>
+                    </td>
+                    <td>
+                        <input formControlName="title" type="text" class="form-control">
+
+                        <!-- <span *ngIf="title.invalid && title.touched">Required</span> -->
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>Content:</label>
+                    </td>
+                    <td>
+                        <input formControlName="content" type="text" class="form-control">
+                        <!-- <span *ngIf="content.invalid && content.touched">Minimum 150 characters required</span> -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>Description:</label>
+                    </td>
+                    <td>
+                        <input formControlName="description" type="text" class="form-control">
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>Author:</label>
+                    </td>
+                    <td>
+                        <input formControlName="author" type="text" class="form-control">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>PublishedAt:</label>
+                    </td>
+                    <td>
+                        <input formControlName="publishedAt" type="datetime" class="form-control" readonly>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>Image:</label>
+                    </td>
+                    <td>
+                        <input formControlName="urlToImage" type="file" class="form-control" readonly>
+
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>URL:</label>
+                    </td>
+                    <td>
+                        <input formControlName="url" type="text" class="form-control" readonly>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <button (click)="submit(blogForm)" type="submit">Submit</button>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+    </form>
+
+</div>

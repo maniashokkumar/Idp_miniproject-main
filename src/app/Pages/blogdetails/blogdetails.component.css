@@ -1,0 +1,11 @@
+.blogcontainer{
+    
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    background-color: cornsilk;
+    border-radius: 10px;
+}
+.title{
+    color:rgba(37, 14, 248, 0.863)
+}

@@ -1,0 +1,10 @@
+<div class="cards" *ngFor="let info of all_Data; let i = index">
+    <ng-container>
+        <app-cardtemplate [info]="info"></app-cardtemplate>
+    </ng-container>
+    <div class="edit">
+        <i (click)="Edit(i)" title="Click to edit" class="fa fa-edit" style="font-size:20px; color:red">Edit</i>
+
+        <i (click)="delete(i)" class="fa fa-trash-o" style="font-size:20px;color:red">Delete</i>
+    </div>
+</div>
